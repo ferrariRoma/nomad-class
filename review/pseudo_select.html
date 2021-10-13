@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>MapleStory</title>
+    <meta charset="utf-8" />
+    <meta rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" />
+    <style>
+        html {
+            background-color: wheat;
+        }
+
+        /* div p span {
+            
+            어디로 가주세요~
+            중복도 됨. 여러 군데에 'div p span'이 있으면 그곳에 몯
+            적용이 된다.
+             
+            background-color: blue;
+        } */
+
+        /* div>span {
+            div의 직계후손 span에게만 적용된다.
+            p를 거치는 등 다른 것을 거쳐서 지나가는 행위는 적용이 안됨.
+            div의 직계후손 span이 여러 군데이면 모두에 적용된다.
+            background-color: blueviolet;
+        } */
+
+        /* div+span {
+            '+'는 바로 다음에 오는 친구를 가리키는 말이다. div의 바로 다음에 오는 모든 스판에게 적용시켜준다.
+            div바로 다음에 span이 오는 경우가 여러 군데이면 그 모두에 적용된다.
+            background-color: brown;
+        } */
+
+        /* div~span {
+            div의 바로 뒤는 아니더라도 div 뒤에 오는 모든 span에게 적용시키는 것.
+            background-color: crimson;
+        } */
+
+        input:required {
+            background-color: crimson;
+        }
+
+        input[placeholder="Password"] {
+            border-color: darkblue;
+            border-width: 10px;
+        }
+
+        input[placeholder~="name"] {
+            border-color: red;
+            border-width: 10px;
+        }
+
+        input[type="Email"] {
+            background-color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HEADACHE</h1>
+    </header>
+    <main>
+        <div>
+            <p><span>Hello</span> every one? i'm <span>fine~</span></p>
+            <span>Hello</span>
+            <span>Hello</span>
+        </div>
+        <span>I'm just next to first div</span>
+        <span>I'm just next to first div</span>
+        <div>
+            <p><span>Hello</span> every one?</p>
+            <span>Hello</span>
+        </div>
+        <span>I'm just next to second div</span>
+        <span>I'm just next to second div</span>
+        <div></div>
+    </main>
+
+    <form>
+        <input type="text" placeholder="First name" required />
+        <input type="text" placeholder="Second name" />
+        <input type="password" placeholder="Password" />
+        <input type="email" placeholder="Email" />
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+html,body {
+  height: 100%;
+}
+
+body{
+  font-family:sans-serif;
+  background-color: #76c4c6;;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+@keyframes dotAnimation {
+  50% {
+    transform: rotate(0.5turn);
+  }
+  100%{
+    transform: rotate(0.5turn);
+  }
+}
+
+.box {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: black;
+  height: 100px;
+  높이가 들어가버리면 삐뚤게 돌게 됨! */
+}
+
+.dots {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 200px;
+  animation: dotAnimation 1s ease-in-out infinite;
+  /* background-color: red;
+  height: 100px; */
+}
+
+.dot {
+  background-color: white;
+  width:20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+@keyframes lineAnimation {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: scaleY(2);
+  }
+  50%,
+  100% {
+    transform: none;
+  }
+}
+
+.lines {
+  width: 150px;
+  
+}
+
+.line {
+  width: 20px;
+  height: 80px;
+  background-color: white;
+  animation: lineAnimation 1s ease-in-out infinite;
+}
+
+.line:nth-child(2){ 
+  animation-delay: 0.1s;
+}
+.line:nth-child(3){ 
+  animation-delay: 0.2s;
+}
+.line:nth-child(4){ 
+  animation-delay: 0.3s;
+}
+.line:last-child{ 
+  animation-delay: 0.4s;
+}

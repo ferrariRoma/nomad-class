@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <title>Daegu FC</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            color: wheat;
+            background-color: tomato;
+            text-decoration: none;
+            padding: 3px 5px;
+            border-radius: 5px;
+            font-size: 20px;
+            /* transition: background-color 10s ease-in-out, color 5s ease-in-out; */
+            transition: all 1s ease-in-out;
+            /* 변하는 쪽이기 때문에 backgruond-color로 선정
+            background-color와 color는 hover 쪽에서
+            미리 한 번 바꿔놓았기 때문에 적용이 가능한 것이다. 
+            그걸 transition이 알아보고 서서히 변하는 효과를 적용시켜줌.
+            즉 변화시키려면 태그 쪽에만 멤버가 있는게 아니라
+            state 쪽에서도 해당 멤버가 있어야 한다.
+            추가적으로, transition은 태그 쪽에 있어야 한다,
+            hover쪽이 아니라.*/
+        }
+
+        a:hover {
+            border-radius: 15px;
+            color: tomato;
+            background-color: wheat;
+        }
+
+        img {
+            border: 5px solid black;
+            border-radius: 50%;
+            /* 이런게 transformation이다. */
+            /* transform: rotateY(33deg) rotateX(20deg) rotatez(20deg); */
+            /* transform: scale(3); */
+            /* transform: scaleX(3); */
+            /* transform: scale(2, 2); */
+            /* transform: translate(60px); */
+            /* transition: transform 5s ease-in-out; */
+            animation: superSexyCoinFlip 5s ease-in-out infinite;
+        }
+
+        /* img:hover {
+            이건 transition과 섞을 수 있음.
+            transform: rotateZ(90deg) scale(0.5);
+        } */
+
+        /* 트랜스폼과 프랜지션은 마우스를 올렸을때 처럼 특정 상황에서의 변화들인데
+        계속해서 그 애니메이션을 얻고 싶다면 'Animation'을 사용하면 된다. */
+        /* @keyframes superSexyCoinFlip {
+            from {
+                transform: rotateX(0);
+            }
+
+            to {
+                transform: rotateX(360deg) translateY(100px);
+            }
+        } */
+        /* 위처럼 하면 이미지가 끊겨서 별로 예쁘지 않다. 
+        그럴땐 이렇게 3단계로 나누어주면 좋다.*/
+        /* @keyframes superSexyCoinFlip {
+            0% {
+                transform: rotateX(0);
+            }
+
+            25% {
+                transform: scale(2);
+            }
+
+            50% {
+                border-radius: 0px;
+                transform: rotateX(360deg) translateY(100px);
+                border-color: tomato;
+                opacity: 0;
+            }
+
+            75% {
+                transform: scale(2);
+            }
+
+            100% {
+                transformL ratateX(0);
+            }
+        } */
+        /* @keyframes superSexyCoinFlip {
+            0% {
+                transform: rotateZ(0);
+            }
+
+            50% {
+                transform: rotateZ(90deg);
+
+            }
+
+            100% {
+                transform: rotateZ(0);
+            }
+        } */
+
+        div {
+            background-color: teal;
+            width: 200px;
+            height: 200px;
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1200px) and (orientation: landscape) {
+            div {
+                background-color: tomato;
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        /* min-device-width 라는 것도 있다 */
+        @media screen and (min-width: 1000px) and (orientation: portrait) {
+            div {
+                background-color: turquoise;
+            }
+        }
+
+        @media print {
+            body {
+                background-color: tomato;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <a href="#">Go home</a>
+    <img src="red-ferrari-roma-2021-5-4k-5k-cars.jpg" width="500px" height="300px" /> -->
+    <div></div>
+    <span>Please flip your phone :( </span>
+</body>
+
+</html>

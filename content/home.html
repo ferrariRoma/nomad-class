@@ -26,19 +26,80 @@
 
 <!DOCTYPE html>
 <html lang="kr">
-    <head>
-        <link rel="shortcut icon" sizes="16*16 32*32 64*64" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" />
-        <title>Home sweet Home</title>
-        <meta name="description" content="This is my website" />
-        <meta charset="utf-8" />
-    </head>
-    
-    <body>
-        <h1>
+
+<head>
+    <link rel="shortcut icon" sizes="16*16 32*32 64*64"
+        href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" />
+    <title>Home sweet Home</title>
+    <!-- <link href="style.css" rel="stylesheet" /> -->
+    <style>
+        h1 {
+            color: blue;
+            text-decoration: underline;
+            font-weight: 100;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+    <meta name="description" content="This is my website" />
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <!-- <h1>
             hello!
         </h1>
        
         <a href="http://google.com" target="_blank">Go Google</a>
         <img src="red-ferrari-roma-2021-5-4k-5k-cars.jpg" />
-    </body>
+        <p>lalalalalalalalalalalalalalalalalalalalalalalala</p>
+        <pre>lalalalalalalalalalalalalalalalalalalalalalalala</pre>
+        <p>My name is <abbr title="Nicolas Serrano Arevalo">NSA</abbr></p>
+        <cite>data</cite>
+        <code>data</code>
+        <p>I like to live in <mark>south korea</mark></p>
+        <p>I like to live in <strong>south korea</strong></p>
+        <p>I like to live in <sub>south</sub><sup>korea</sup></p> -->
+    <form>
+        <div>
+            <label for="Profile">Profile Photo</label>
+            <input id="Profile" type="file" accept=".docx, image/*" />
+        </div>
+        <div>
+            <label for="first-name">First Name</label>
+            <input id="first-name" required placeholder="Name" type="text" />
+            <label for="last-name">Last Name</label>
+            <input id="last-name" placeholder="Last Name" disabled type="text" />
+        </div>
+        <div>
+            <label for="username">Username</label>
+            <input id="username" placeholder="Username" minlength="10" type="text" />
+            <input placeholder="Password" type="password" />
+            <input type="submit" value="Creat Account" />
+        </div>
+        <label for="website">homepage</label>
+        <input id="website" required placeholder="website" type="url" />
+        <input type="range" />
+        <input type="date" />
+    </form>
+    <audio controls="enabled" autoplay="enabled"
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
+    <dialog open>
+        <p>Greetings! One and All!</p>
+    </dialog>
+
+    <header>
+        <h1>Title in header</h1>
+    </header>
+
+    <main>
+        <p>Content in main</p>
+        <span>For short</span>
+    </main>
+
+    <footer>
+        &copy; 2021 WG
+    </footer>
+</body>
+
 </html>

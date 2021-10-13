@@ -1,0 +1,58 @@
+body {
+    height: 100vh;
+    background-color: wheat;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    /* 전제적인 틀을 body레벨에서부터 잡아줌.
+    이들은 배경색이 없어서 초보인 나로서는 잘 구분이 안되기 때문에
+    틀이 갖춰지기 전까지는 간단하게나마 배경색을 넣는것도 좋은듯.
+    만들기 전에 빈 종이에다가 전반적인 구상을 하고 시작하면 좋을 거 같음. */
+}
+
+h1{
+    margin-bottom: 50px;
+}
+
+section{
+    /*넓이를 %로도 쓸 수 있구나..*/
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.color {
+    width:48%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.color:first-child .color__bg {
+background-color: tomato;
+}
+.color:nth-child(2) .color__bg {
+background-color: teal;
+}
+.color:nth-child(3) .color__bg {
+background-color: burlywood;
+}
+.color:last-child .color__bg {
+background-color: thistle;
+}
+
+.color__bg {
+    height:300px;
+    border: 5px solid white;
+}
+
+.color__info{
+    position:absolute;
+    top:20px;
+    width: 100%;
+    background-color: white;
+    padding: 0 10px;
+    box-sizing: border-box;
+}

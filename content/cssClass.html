@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <title>Glik time</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="css Class practice" />
+    <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" />
+    <style>
+        /* #second {
+            background-color: rgb(211, 146, 17);
+            width: 500px;
+           position: fixed;
+            top: 5px;
+        }
+
+        #first {
+            position: fixed;
+            top: 5px;
+            opacity: 0.2;
+        }
+
+        body {
+            margin: 20px;
+            height: 1000vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            flex-wrap: wrap-reverse;
+        }
+
+        div {
+            background-color: teal;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 300px;
+            height: 300px;
+            font-size: 30px;
+            color: brown;
+        } */
+
+        body {
+            height: 1000vh;
+            margin: 50px;
+        }
+
+        /* div {
+
+            width: 150px;
+            height: 150px;
+            color: white;
+            background-color: wheat;
+            position: relative;
+            top: -10px
+        }*/
+        /* .green {
+            background-color: teal;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            top: -10px;
+            left: -10px;
+            position: absolute;
+            right: 0;
+        } */
+        /* div:first-child {
+            background-color: tomato;
+        }
+
+        div:last-child {
+            background-color: teal;
+        } */
+        /* span {
+            background-color: tomato;
+        } */
+
+        /* span:nth-child(2),
+        span:nth-child(4) {
+            background-color: teal;
+        } */
+        /* span:nth-child(odd) {
+            background-color: teal;
+        } */
+
+        /* span:nth-child(4n) {
+            background-color: teal;
+        } */
+
+        /* span:nth-child(4n+2) {
+            background-color: teal;
+        } */
+        /* span {
+            background-color: yellowgreen;
+            padding: 5px;
+            border-radius: 10px;
+        } */
+
+        /* div p span {
+            color: teal;
+            그냥 찾아가는 것. 여기여기로 가주세요!~
+        } */
+
+        /* div>span {
+            text-decoration: underline;
+            바로 밑의 자식에게
+        } */
+
+        /* p+span {
+            text-decoration: underline;
+            바로 다음의 형제
+        } */
+        /* p~span {
+            text-decoration: underline;
+            /* 바로 다음에 오는 형제는 아니지만 후에 나오는 친구에게 적용할 때
+        } */
+        /* input:optional {
+            border: 1px solid wheat;
+        }
+
+        input:required {
+            border: 5px solid tomato;
+        }
+
+        input[type="password"] {
+            background-color: tomato;
+        }
+
+        input[placeholder="username"] {
+            background-color: blue
+        }
+
+        input[placeholder~="key"] {
+            background-color: magenta;
+        } */
+        /* button:focus {
+            background-color: royalblue;
+        }
+
+        a:visited {
+            color: salmon;
+        }
+
+        form {
+            border: 1px solid salmon;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        form:focus-within {
+            border-color: seagreen;
+        }
+        form:hover input {
+            background-color: sienna;
+        }
+        form:hover input:focus {
+            background-color: sienna;
+        } */
+        input::placeholder {
+            color: yellowgreen;
+        }
+
+        /* input {
+            color: yellowgreen;
+        } */
+
+        p::selection {
+            background-color: yellowgreen;
+            color: turquoise;
+        }
+
+        /* p::first-letter {
+            background-color: yellowgreen;
+            color: turquoise;
+            font-size: 20px;
+        } */
+
+        /* p::first-line {
+            background-color: yellowgreen;
+            color: turquoise;
+            font-size: 20px;
+        } */
+
+        :root {
+            --main-color: #fcce00;
+            --default-border: 1px solid var(--main-color);
+        }
+
+
+        p {
+            background-color: var(--main-color);
+        }
+
+        a {
+            color: var(--main-color);
+        }
+
+        input {
+            border: var(--default-border);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- <span>hello</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing <span>elit.</span></p>
+        <address>hi</address>
+        <span>hello</span>
+        <span>hello</span> -->
+        <!-- <form>
+            <input type="text" placeholder="username" />
+            <input type="text" placeholder="key make" />
+            <input type="text" placeholder="key lend" />
+            <input type="text" placeholder="key borrow" />
+            <input type="text" placeholder="username" />
+            <input type="password" required placeholder="password" />
+        </form> -->
+        <!-- <button>button</button>
+        <a href="https://apple.com">apple</a>
+        <form>
+            <input type="text" name="" id="" />
+            <input type="text" name="" id="" />
+            <input type="text" name="" id="" />
+        </form> -->
+        <form>
+            <input type="type" placeholder="name" />
+
+        </form>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolor rerum fugiat perferendis ex hic nemo
+            adipisci alias eos architecto quibusdam inventore ipsam soluta, voluptates illo dolore explicabo enim iusto!
+        </p>
+    </div>
+</body>
+
+</html>

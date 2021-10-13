@@ -29,7 +29,7 @@ html은 잘못 입력하면 그걸 에러처리를 해주지 않는다. 그래�
 아래는 예시임
   -->
 
-  <!DOCTYPE html>
+<!--   <!DOCTYPE html>
 <html>
     <head>
         <title>Home sweet Home</title>
@@ -64,4 +64,91 @@ html은 잘못 입력하면 그걸 에러처리를 해주지 않는다. 그래�
         <a href="http://google.com" target="_blank">Go Google</a>
         <img src="thumb-1920-1110549.jpg" />
     </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="review the HTML contents" />
+        <link rel="shortcut" sizes="16*16 32*32 64*64" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" />
+        <title>NONFLIX</title>
+    </head>
+    <body>
+        <a href="http://naver.com" target="_blank">Go Naver</a>
+        
+        <form>
+            <label for="file">Profile Photo</label>
+            <input id="file" type="file" accept=".docx, image/*" />
+            <label for="first">first-name</label>
+            <input id="first" required placeholder="First Name" minlength="8" type="text">
+            <label for="email">e-mail</label>
+            <input id="email" disabled type="email" placeholder="e-mail">
+            <input type="submit" value="제출"/>
+            <input type="date">
+            <input type="range">
+        </form>
+
+        <audio controls autoplay src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
+    </body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <title>Bolton until Die</title>
+    <link rel="shortcut icon" sizes="16*16 32*32 64*64"
+        href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" />
+    <meta charset="uft-8" />
+    <mata name="description" content="FM2021 Project" />
+
+    <style>
+        label {
+            color: blueviolet;
+            font-weight: 900;
+            font-size: x-small;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Bolton</h1>
+    </header>
+
+    <main>
+        <ul>
+            <li><a href="http://naver.com" target="_blank">네이버</a></li>
+            <li><a href="http://google.com" target="_self">구글</a></li>
+        </ul>
+        <form>
+            <div>
+                <label for="first-name">First name</label>
+                <input type="text" placeholder="first name" required id="first-name" />
+                <label for="last-name">Last name</label>
+                <input type="text" placeholder="last name" required id="last-name" />
+            </div>
+            <div>
+                <label for="profile-picture">profile picture</label>
+                <input id="profile-picture" type="file" accept="image/*" />
+                <label for="Birthday">Birthday</label>
+                <input id="Birthday" type="date" />
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2021 wg
+    </footer>
+
+
+</body>
+
+
 </html>
