@@ -1,0 +1,47 @@
+.nav {
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* css에서는 박스의 너비를 200px로 해두고 padding-left를 50px을 해주면
+박스의 너비가 250px로 된다.
+왜? 내가 지정한 200px이란게 있으니까!
+box-sizing:border-box를 해주면 css에게 내가 패딩을 줘도 신경쓰지뫄~
+라고 하는 것이다.
+ */
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  color: #2f363e;
+  position: relative;
+}
+
+.nav__notification {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+}
+
+/* nav가 아니라 nav__list에서 flex 설정을 해야 한다. */
+
+/* 모든 링크는 디폴트로 파랑색을 가지고 있다. */
+
+/* padding은 border에서 아이콘 사이의 공간임을 꼭~ 명심합시다~ */
+
+.nav_reddot {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  left: 30px;
+  background-color: red;
+}

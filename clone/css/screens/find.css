@@ -1,0 +1,107 @@
+.recommended-frieds {
+  border-bottom: var(--main-border);
+  border-top: var(--main-border);
+  padding: 25px 0;
+  margin-bottom: 25px;
+}
+
+.recommended-frieds__title {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.recommended-frieds span {
+  display: block;
+  margin: 110px 0;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 25px;
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+.open-chat__header span {
+  opacity: 0.6;
+}
+
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.opne-chat__title {
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+/* css에서 소문자를 대문자로 만들어 줄 수 있다. */
+.opne-chat__hashtags {
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.open-post__members {
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.open-post__members img {
+  width: 15px;
+  border-radius: 7.5px;
+  margin-right: 5px;
+}
+
+.open-post__member-count {
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+/* 코드 상에 다른 devider가 있을 수 있으니까
+앞에 open-post__column을 붙여주다. */
+.open-post__column .devider {
+  width: 1.5px;
+  height: 14px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 5px;
+}
+
+.open-post__member-status {
+  color: magenta;
+  opacity: 0.4;
+}
+
+.open-post__photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.open-post__heart-count {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+/* 우리가 이 div에 따로 넓이와 높이를 주지 않았기 때문에
+absolute를 해주면 크기가 padding값을 준 것을 반영해서 최소 크기로
+줄어든다. */
+
+.open-post__heart-count span {
+  margin-left: 3px;
+}
+
+.open-post__photo {
+  position: relative;
+}

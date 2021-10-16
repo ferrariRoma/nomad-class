@@ -1,0 +1,21 @@
+.icon-row {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+/* border-bottom과 같은 연하고 앏은 선이
+   반복해서 이곳저곳에서 나오고 있기 때문에 니꼬는 이것을 variables에 추가해주었다.
+   똑같은 변수가 반복해서 나오면 변수를 만드는 것이 더 편하다ㅇㅇ */
+
+.icon-row__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 아이콘이 밑의 설명들 보다 훨씬 크기 때문에
+  따로 크기를 정해주는 것이 낫다. */
+.icon-row__icon i {
+  font-size: 40px;
+  margin-bottom: 15px;
+}

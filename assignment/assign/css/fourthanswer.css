@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  max-width: 360px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+/* 나와 다른 점
+1. body에 max-width를 적용함.
+2. header > * 을 사용해서 모든 요소의 너비를 33으로 맞춰줌.
+3. 그림파일 i에도 text-align이 먹히는군!?
+4. 검색창을 header와 main 사이에 따로 만들고 relative를 이용해서
+위로 올림
+5. 그림자를 희안하게 쓰네? 색을 겹칠 수 있구나?
+ */
+header {
+  background: #fdcc32;
+  display: flex;
+  justify-content: center;
+  padding: 40px 15px;
+  padding-bottom: 50px;
+}
+
+header > * {
+  width: 33%;
+}
+
+header h1 {
+  text-align: center;
+  font-weight: 600;
+}
+
+header i:last-child {
+  text-align: right;
+}
+
+/*
+1. box-shadow
+box-shadow를 통해 그림자를 구현할 수 있습니다.
+border-radius와 box-shadow: inset을 통해 휴대폰의 곡면에 입체감을 줄 수 있습니다.
+
+2. overflow-x
+overflow-x 속성으로 width를 초과한 부분을 어떻게 처리할 지 설정할 수 있습니다.
+많이 사용되는 속성값으로, hidden, scroll 이 있습니다.
+hidden의 경우, 이미지의 일부를 보이게 하거나 slider를 구현할 때 많이 사용됩니다.
+
+3. Pseudo-element
+placeholder와 같은 의사 요소(Pseudo-Element)들의 스타일을 설정할 수 있습니다.
+placeholder(::placeholder)의 글자색을 바꾸거나, 첫 번째 글자(::first-letter)만 크기를 키우거나, 첫 번째 줄(::first-line)의 줄간격을 바꿀 수 있습니다.
+
+4. Search 파트
+해설의 search 파트에서, input에 text를 가득 채우면 텍스트가 icon을 덮게 되는 것을 볼 수 있습니다.
+이를 해결하기 위해 .search에 flex를 적용함으로써, input의 텍스트가 icon을 덮지 않게 할 수 있습니다. 
+=> 서치 파트에서 이런 문제가 생기면 이렇게 해결할 수 있다~
+*/
+
+.search {
+  width: 95%;
+  position: relative;
+  top: -30px;
+  margin: 0 auto;
+}
+
+input {
+  width: 100%;
+  border: none;
+  padding: 15px 25px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+input::placeholder {
+  opacity: 0.7;
+}
+
+.search i {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/*
+1. 인풋과 메인이 페딩 값을 맞춤~
+2. img에도 역시 class를 적어주는군?
+3. img 사이즈를 css 조절했군.
+*/
+main {
+  padding: 0px 15px;
+}
+
+main h2 {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.featured-book {
+  display: flex;
+}
+
+.featured-book__cover {
+  width: 110px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.featured-book__data {
+  width: 100%;
+}
+
+/* 작가이름을 왜 block처리를 했을까?,,, */
+
+.featured-book__title {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.featured-book__author {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.3;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* 여기서는 한군데 여러 이미지가 들어가니까 div로 묶어준듯
+그리고 폰트 사이즈를 이용해서 별표의 크기를 조정함. */
+
+.featured-book__rating {
+  color: #fdcc32;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.featured-book__rating i:last-child {
+  color: #f7f7f7;
+}
+
+.featured-book__tags {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.featured-book__tag {
+  background: #f7f7f7;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 5px;
+}
+
+.featured-book__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.featured-book__bookmark {
+  background-color: #fdcc32;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.featured-book__book {
+  background: black;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 40px;
+  display: block;
+  border-radius: 5px;
+}
+
+/* top adventures도 따로 어디 속하지 않게 함.
+스크롤을 white-space:wrap을 안쓰고도 했네? 드드;
+ */
+
+.top-books {
+  display: flex;
+  overflow-x: scroll;
+  padding-bottom: 15px;
+}
+
+.top-books__book {
+  margin-right: 20px;
+}
+
+/* 사진들의 크기를 width로만 조정! */
+
+.top-books__book img {
+  width: 68px;
+  border-radius: 3px;
+}
+
+.top-books__rating {
+  color: #fdcc32;
+  font-size: 8px;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+
+.popular {
+  display: flex;
+}
+
+.popular img {
+  width: 140px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.popular__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.popular__bio {
+  opacity: 0.5;
+  font-size: 14px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 1000vh;
+        }
+        div {
+            /* position:fixed;
+            top:0; */
+            width: 50%;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            background-color:darkcyan;
+            padding: 2px 5px;
+        }
+
+        .status__sth {
+            width: 33%;
+        }
+
+        .status__left {
+            margin-right: 5px;
+        }
+
+        .status__center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .status__right {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        div:not(.body) {
+            background-color:darkmagenta ;
+            width: 100%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="status">
+        <span class="status__sth status__left">what</span>
+        <span class="status__sth status__center">title</span>
+        <span class="status__sth status__right">sth</span>
+    </div>
+    <div class="body"></div>
+    <div class="main"></div>
+</body>
+</html>

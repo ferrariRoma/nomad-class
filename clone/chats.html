@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats - Kokoa Clone</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- chats page is similar to friends page. So copy and edit will best thing. -->
+    <div class="status--bar">
+        <div class="status--bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status--bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status--bar__column">
+            <span>110%</span>
+            <i class="fas fa-battery-full fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <!-- 네비게이션 바는 nav를 사용한다. 보통 nav는
+    ul과 li로 구성이 됨. 그리고 li는 anchor를 가진다. -->
+    <header class="screen-header">
+        <h1 class="screen-header__title">Chats</h1>
+        <div class="screen-header__icons">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="far fa-comment-dots fa-lg"></i></span>
+            <span><i class="fas fa-music fa-lg"></i></span> 
+            <span><i class="fas fa-cog fa-lg"></i></span>
+        </div>
+    </header>
+
+    <!-- 니꼬는 chats 스크린에서 screen-header과의 간격이 더 벌어졌으면 해서,
+    screen-header의 border-bottom에 마진값을 주었는데, 이렇게 하면 의도치 않게
+    friends 스크린의 간격도 벌어지게 된다.
+    나는 그냥 괜찮아서 뒀는데 니꼬는 이렇게 한 뒤에 #friends-display-link에
+    margin-bottom에 negative값을 주었다. margin-top:-10px; -->
+    <main class="main-sreen">
+    <!-- 
+    main을 설정한 이유는 동일한 간격으로 패딩값이 들어가기 때문이다.
+
+    여기는 프로필 사진과 이름이 나오는 곳이다. 
+    여러군데 쓰이는 만큼 components에 css를 만들 수 있도록
+    합시다! -->
+    <div class="user-component">
+        <div class="user-component__column">
+            <img 
+            src="https://ww.namu.la/s/2675f0d7e8ab0989a0cee78cc0a36aa64eafa82be09c4adf3847a29d04b8689edaf92c314c4129a3a04c494c6484ed2fc022955b6908e5d74948764ae70ba8fdf5941ef86f54b46f0f8ecefd70e8541371b616ebda81e01d3f8c6576da2ff1be2e1d123e1e43e91ce7f1c880c1035f73"
+             class="user-component__avatar user-component__avatar" />
+            <div class="user-component__text">
+                <h4 class="user-component__title">Nicolas</h4>
+                <h6 class="user-component__subtitle">blahblahblahblahblahblahblahblah</h6>
+            </div>
+        </div>
+        <div class="user-component__column">
+            <span class="user-component__time">21:22</span>
+            <!-- 시간과 숫자 사이의 간격이 있는 것은
+                 user-component 항목에 해당하니 가서 좀 더 만져주도록 하자 -->
+            <div class="badge">2</div>
+            <!-- 숫자 1은 여기저기서 사용이 되고 있어서 컴포넌트에 따로 하나 만들도록 하자!
+            이전 네비게인션 바에 있던 것도 가서 badge라는 별도의 클래스를 추가하고
+            빼줄 수 있는 것은 빼줄 수 있도록 하자 -->
+            <!-- 추가적으로 nav-bar에 있는 1은 span으로 하려다 보니 그렇게 됐는데,
+            여기서는 div로 진행을 시키면 badge 클래스로도 쉽게 만들 수 있다.-->
+        </div>
+    </div>
+
+    <div class="user-component">
+        <div class="user-component__column">
+            <img 
+            src="https://ww.namu.la/s/2675f0d7e8ab0989a0cee78cc0a36aa64eafa82be09c4adf3847a29d04b8689edaf92c314c4129a3a04c494c6484ed2fc022955b6908e5d74948764ae70ba8fdf5941ef86f54b46f0f8ecefd70e8541371b616ebda81e01d3f8c6576da2ff1be2e1d123e1e43e91ce7f1c880c1035f73"
+             class="user-component__avatar user-component__avatar" />
+            <div class="user-component__text">
+                <h4 class="user-component__title">Nicolas</h4>
+                <h6 class="user-component__subtitle">blahblahblahblahblahblahblahblah</h6>
+            </div>
+        </div>
+        <div class="user-component__column">
+            <span class="user-component__time">19:21</span>
+            <!-- 시간과 숫자 사이의 간격이 있는 것은
+                 user-component 항목에 해당하니 가서 좀 더 만져주도록 하자 -->
+            <div class="badge">5</div>
+            <!-- 숫자 1은 여기저기서 사용이 되고 있어서 컴포넌트에 따로 하나 만들도록 하자!
+            이전 네비게인션 바에 있던 것도 가서 badge라는 별도의 클래스를 추가하고
+            빼줄 수 있는 것은 빼줄 수 있도록 하자 -->
+            <!-- 추가적으로 nav-bar에 있는 1은 span으로 하려다 보니 그렇게 됐는데,
+            여기서는 div로 진행을 시키면 badge 클래스로도 쉽게 만들 수 있다.-->
+        </div>
+    </div>
+
+    </main>
+    
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link" href="freiends.html"><i class="far fa-user fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="chats.html">
+                    <span class="nav__notification badge">1</span>
+                    <i class="fas fa-comments fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="find.html">
+                    <i class="fas fa-search fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="more.html">
+                    <span class="nav_reddot"></span>
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 큰 틀을 잡아두고 클래스 명명 작업 시작. 
+    항상 간결하게. 관련성 있게!-->
+    
+
+
+
+    <!-- script는 항상 바디의 맨 마지막에 있어야 한다. -->
+    <script src="https://kit.fontawesome.com/300544da27.js" crossorigin="anonymous"></script>
+</body>
+</html>

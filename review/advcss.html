@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @media screen and (max-width: 1200px) {
+            .first-box {
+                background-color: whitesmoke;
+            }
+        }
+
+        @media screen and (min-width:850px) and (max-width: 1000px) {
+            .first-box {
+                background-color: tomato;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            .first-box {
+                background-color: turquoise;
+            }
+        }
+        @media screen and (orientation:landscape) {
+            .first-box {
+                background-color: violet;
+            }
+            span {
+                display: none;
+            }
+        } */
+
+        /* .first-box:hover {
+            background-color: red;
+            transform: rotateX(180deg); 
+        }*/
+
+        /* @keyframes practice {
+            from {
+                transform: scale(0.4);
+                background-color: yellow;
+            }
+            to {
+                transform: scale(1,5);
+                background-color: red;
+            }
+        } */
+        /* @keyframes practice {
+            0% {
+                transform: scale(0.4);
+            }
+            40%,90% {
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1,5);
+                opacity:1;
+            }
+        } */
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            width: 100px;
+            height:100px;
+            background-color: green;
+            /* transition: all 20s ease-in-out, background-color 3s; */
+        }
+
+        @media screen and (max-width:900px) and (min-width:700px) {
+            div {
+                background-color: tomato;
+            }
+            span {
+                display: none;
+            }
+        }
+
+        @media screen and (orientation:portrait) {
+            div {
+                display: none;
+            }
+        }
+
+        /* @media print {
+            div {
+                background-color: blue;
+            }
+        } */
+        
+        span::first-letter {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <span>plz flip ur phone</span>
+</body>
+</html>

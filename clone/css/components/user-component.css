@@ -1,0 +1,89 @@
+.user-component {
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.user-component,
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+}
+/* 2개에 함께 적용하려면 ,를 꼭 넣자. 다른 곳에서도 
+마찬가지로 적용되는 방식이다. */
+
+/* 보면 사진 사이즈가 3가지가 있다. 일단 노멀 사이즈로 만들고
+수정을 하도록 하자!
+사진은 width만 지정해주면 크기가 먹히는군? */
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.user-component__avatar-xl {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+/* 보면 프로필 사진 왼쪽으로 해서 공간이 있는데
+padding을 해줘도 되고 margin을 해줘도 되지만
+위에 friends 부분을 보면 같은 간격이 있다.
+이런 부분은 variables로 가서 전역변수 설정을 해두면 편하다. */
+
+.user-component__title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.user-component__subtitle {
+  margin-top: 10px;
+  color: rgba(0, 0, 0);
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.user-component__avatar-sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+}
+
+/* 400이 디폴트인듯? */
+.user-component__title-not-bold {
+  font-weight: 400;
+}
+
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+/* display:flex 아래로의 설정은 챗팅 페이지에서
+배지를 우측으로 보내려고 한 것이다. 하지만 이것은 친구 창에서
+2> 이 부분에 깨짐을 준다.
+그때는 그 부분의 html을 div에 넣어버리면 된다. 
+그렇게 되면 flex가 2> 여기까지 영향을 못주게 된다.*/
+
+.user-component__time {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.user-component__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  border: 1px solid tomato;
+  border-radius: 10px;
+  font-size: 8px;
+  margin-left: 5px;
+  border-width: 2px;
+  color: tomato;
+}

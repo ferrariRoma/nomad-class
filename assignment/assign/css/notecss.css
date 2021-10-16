@@ -1,0 +1,283 @@
+@import "reset.css";
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* title-search_box */
+.background {
+  background-color: #ffce31;
+  width: 45%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.top-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 99px;
+  padding: 0 12px;
+}
+
+.title__icon h1 {
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.title__icon i {
+  cursor: pointer;
+}
+
+.box {
+  background-color: whitesmoke;
+}
+
+.search__part {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 25px;
+  height: 51px;
+}
+
+.search__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  position: relative;
+}
+
+.search {
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  font-size: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: whitesmoke;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.search__icon {
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+}
+
+/* first-section__main-book */
+.main-book {
+  padding: 20px;
+}
+
+.main-book__title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.main {
+  display: flex;
+}
+
+.main-book__pic {
+  margin-right: 20px;
+}
+
+.book__pic {
+  border-radius: 10px;
+}
+
+.main-book__content {
+  /* background-color: tomato; */
+  padding: 3px 0px;
+  width: 70%;
+}
+
+.main-book__detail {
+  width: 70%;
+  line-height: 1.4;
+}
+
+.main-book__detail h1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.main-book__detail h3 {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.main-book__rating {
+  margin: 5px 0;
+}
+
+.main-book__btns {
+  width: 70%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin: 10px 0px;
+}
+
+.main-book__btn {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 70%;
+  font-size: 15px;
+  display: flex;
+  padding: 15px;
+  margin: 0px 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 1s ease-in-out;
+}
+
+.main-book__btn:hover {
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-book__mark {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  padding-right: 10px;
+}
+
+.book__mark {
+  display: flex;
+  height: 35px;
+  width: 35px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffce31;
+  transition: all 1s ease-in-out;
+}
+
+.book__mark:hover {
+  background-color: black;
+  color: #ffce31;
+}
+
+.book__now {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 40%;
+  font-size: 15px;
+  display: flex;
+  padding: 10px;
+  margin: 0px 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 1s ease-in-out;
+}
+
+.book__now:hover {
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  cursor: pointer;
+}
+
+/* second section */
+.bottom-box {
+  padding: 0 20px;
+}
+
+.bottom-title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.top__books {
+  display: flex;
+  height: 160px;
+  white-space: nowrap;
+  overflow: auto;
+  overflow-x: scroll;
+}
+
+.book__content {
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book__content:first-child .book__box {
+  width: 70px;
+  height: 112px;
+  background-color: cornflowerblue;
+}
+
+.book__content:nth-child(2) .book__box {
+  width: 70px;
+  height: 112px;
+  background-color: darkgreen;
+}
+
+.book__content:nth-child(3) .book__box {
+  width: 70px;
+  height: 112px;
+  background-color: rgb(203, 89, 163);
+}
+
+.book__content:nth-child(4) .book__box {
+  width: 70px;
+  height: 112px;
+  background-color: rgb(128, 200, 183);
+}
+
+.book__content:last-child .book__box {
+  width: 70px;
+  height: 112px;
+  background-color: rgb(232, 228, 183);
+}
+
+.author .author__detail {
+  display: flex;
+}
+
+.author__name h1 {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.author {
+  padding-bottom: 25px;
+}
+
+.picture {
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.last__div {
+  padding: 3px 0;
+}
+
+.bottom-name h1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.bottom-name h3 {
+  margin-top: 20px;
+  font-size: 16px;
+  opacity: 0.6;
+}

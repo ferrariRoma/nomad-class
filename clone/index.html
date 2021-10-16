@@ -28,9 +28,16 @@
         <p class="welcome--header__text">If you have a.... </p>
     </header>
 
-    <form id="login--form">
-        <input type="text" placeholder="Email or phone number" />
-        <input type="password" placeholder="Password" />
+    <!--form은 action과 method이다.
+전자는 어떤 페이지로 데이터를 보내줄 건지를 알려줄 건지를 표기하는 곳이고,
+후자는 POST와 GET 방식이 있는데, Post는 벡엔드 서버에 정보를 전송하는 방식이다.
+get은 보안이 취약하다. 그래서 username과 password는 GET으로
+'절대' 보내서는 안된다. 
+지금은 우리가 서버가 없으니까, 그리고 url에 포함되도 괜찮은 내용이라 GET으로 보내준다.
+서버가 없을때는 post를 써도 get과 같은 결과가 나온다.-->
+    <form action="freiends.html" method="get" id="login--form">
+        <input name="username" type="text" placeholder="Email or phone number" />
+        <input name="password" type="password" placeholder="Password" />
         <input type="submit" value="Log in" />
         <a href="#">Find Kokoa Account or Password</a>
     </form>

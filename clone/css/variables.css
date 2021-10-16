@@ -1,0 +1,15 @@
+:root {
+  --yellow: #fbe100;
+  /* css에서 전역변수를 설정할 때 이런 방식으로 한다.
+  본 css에 가서는 var(--yellow); 라고 사용해주면 된다.
+  val 아니라 var이다. */
+  --horizontal-space: 25px;
+  /* padding: var(--horizontal-space);
+  라고 해주면 padding: 25px;
+  과 같은 효과가 난다. */
+  --main-border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.friedns-sreen {
+  padding: 0px var(--horizontal-space);
+}

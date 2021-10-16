@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find - Kokoa Clone</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- chats page is similar to friends page. So copy and edit will best thing. -->
+    <div class="status--bar">
+        <div class="status--bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status--bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status--bar__column">
+            <span>110%</span>
+            <i class="fas fa-battery-full fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <!-- 네비게이션 바는 nav를 사용한다. 보통 nav는
+    ul과 li로 구성이 됨. 그리고 li는 anchor를 가진다. -->
+    <header class="screen-header">
+        <h1 class="screen-header__title">Find</h1>
+        <div class="screen-header__icons">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span class="nav_reddot cog_reddot"></span>
+            <span><i class="fas fa-cog fa-lg"></i></span>
+        </div>
+    </header>
+
+    <!-- 니꼬는 chats 스크린에서 screen-header과의 간격이 더 벌어졌으면 해서,
+    screen-header의 border-bottom에 마진값을 주었는데, 이렇게 하면 의도치 않게
+    friends 스크린의 간격도 벌어지게 된다.
+    나는 그냥 괜찮아서 뒀는데 니꼬는 이렇게 한 뒤에 #friends-display-link에
+    margin-bottom에 negative값을 주었다. margin-top:-10px; -->
+    <main class="main-sreen">
+    <!-- 
+    find도 역시 메인스크린 클래스는 그대로 가져다 쓸 것이다.
+    전체적인 패딩 값이 여기도 적용이 되기 때문이다. -->
+    <div class="icon-row">
+        <div class="icon-row__icon">
+            <i class="fas fa-qrcode"></i>
+            <span>QR code</span>
+        </div>
+        <div class="icon-row__icon">
+            <i class="far fa-address-book"></i>
+            <span>Add by Contacts</span>
+        </div>
+        <div class="icon-row__icon">
+            <i class="fas fa-fingerprint"></i>
+            <span>Add by ID</span>
+        </div>
+        <div class="icon-row__icon">
+            <i class="far fa-envelope"></i>
+            <span>Invite</span>
+        </div>
+    </div>
+
+    <div class="recommended-frieds">
+        <h6 class="recommended-frieds__title">Recommended Frieds</h6>
+        <span>You have no recommended friends.</span>
+    </div>
+    
+    <!-- hgroup과 span을 정말 적절하게 적어주는군!
+    이미지와 글씨가 한 덩어리이면 span 안에 i를 넣어주는 것이 훨씬 낫다 -->
+    <div class="open-chat">
+        <div class="open-chat__header">
+            <h4 class="open-chat__title">Open chat</h4>
+            <span>Go to Openchat Home <i class="fas fa-chevron-right fa-xs"></i></span>
+        </div>
+    </div>
+
+    <div class="open-post">
+        <div class="open-post__column">
+            <h5 class="opne-chat__title">#BTS</h5>
+            <h6 class="opne-chat__hashtags">#bts#army#friends</h6>
+            <div class="open-post__members">
+                <img src="https://ww.namu.la/s/2675f0d7e8ab0989a0cee78cc0a36aa64eafa82be09c4adf3847a29d04b8689edaf92c314c4129a3a04c494c6484ed2fc022955b6908e5d74948764ae70ba8fdf5941ef86f54b46f0f8ecefd70e8541371b616ebda81e01d3f8c6576da2ff1be2e1d123e1e43e91ce7f1c880c1035f73" />
+                <span class="open-post__member-count">802 members</span>
+                <div class="devider"></div>
+                <span class="open-post__member-status">Active</span>
+            </div>
+        </div>
+        <div class="open-post__column">
+            <div class="open-post__photo">
+                <img src="https://ww.namu.la/s/2675f0d7e8ab0989a0cee78cc0a36aa64eafa82be09c4adf3847a29d04b8689edaf92c314c4129a3a04c494c6484ed2fc022955b6908e5d74948764ae70ba8fdf5941ef86f54b46f0f8ecefd70e8541371b616ebda81e01d3f8c6576da2ff1be2e1d123e1e43e91ce7f1c880c1035f73" />
+                <div class="open-post__heart-count">
+                    <i class="fas fa-heart fa-xs"></i>
+                <span>326</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>
+    
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link" href="freiends.html"><i class="far fa-user fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="chats.html">
+                    <span class="nav__notification badge">1</span>
+                    <i class="far fa-comments fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="find.html">
+                    <i class="fas fa-search fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="more.html">
+                    <span class="nav_reddot"></span>
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 큰 틀을 잡아두고 클래스 명명 작업 시작. 
+    항상 간결하게. 관련성 있게!-->
+    
+
+
+
+    <!-- script는 항상 바디의 맨 마지막에 있어야 한다. -->
+    <script src="https://kit.fontawesome.com/300544da27.js" crossorigin="anonymous"></script>
+</body>
+</html>

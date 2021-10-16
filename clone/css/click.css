@@ -1,0 +1,11 @@
+input:focus {
+  /* state를 활용해서 클릭을 했을때 조금 더 예쁘게
+    설정을 해줍시다. */
+  /* border 이 아닌 이 경우에는 outline으로 설정해준다. */
+  outline: none;
+}
+
+a {
+  color: inherit;
+}
+/* 모든 링크는 파랑색이 디폴트이기 때문이다. */

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends - Kokoa Clone</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="status--bar">
+        <div class="status--bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status--bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status--bar__column">
+            <span>110%</span>
+            <i class="fas fa-battery-full fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+
+    <!--
+        단축키들
+        !
+        link:css
+        div.classname
+        div#idname
+        nav>ul>li*4
+     -->
+    <!-- 네비게이션 바는 nav를 사용한다. 보통 nav는
+    ul과 li로 구성이 됨. 그리고 li는 anchor를 가진다. -->
+    <header class="screen-header">
+        <h1 class="screen-header__title">Friends</h1>
+        <div class="screen-header__icons">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="fas fa-music fa-lg"></i></span> 
+            <span><i class="fas fa-cog fa-lg"></i></span>
+        </div>
+    </header>
+
+    <!-- 여기는 특정한 화면을 지정하는 부분이므로 css는
+    screens에 만들 수 있도록 하자.
+    추가적으로 이거는 하나만 있는 창이기 때문에 클래스 보다는 id를
+    사용하는 것이 나은 선택이라 볼 수 있다. -->
+    <a id="friends-display-link" >
+        <i class="fas fa-info-circle"></i>
+        Friends 'Names Display'
+        <i class="fas fa-chevron-right fa-xs"></i>
+    </a>
+
+
+    <main class="friedns-sreen">
+    <!-- 
+    main을 설정한 이유는 동일한 간격으로 패딩값이 들어가기 때문이다.
+
+    여기는 프로필 사진과 이름이 나오는 곳이다. 
+    여러군데 쓰이는 만큼 components에 css를 만들 수 있도록
+    합시다! -->
+    <div class="user-component">
+        <div class="user-component__column">
+            <img src="https://ww.namu.la/s/2675f0d7e8ab0989a0cee78cc0a36aa64eafa82be09c4adf3847a29d04b8689edaf92c314c4129a3a04c494c6484ed2fc022955b6908e5d74948764ae70ba8fdf5941ef86f54b46f0f8ecefd70e8541371b616ebda81e01d3f8c6576da2ff1be2e1d123e1e43e91ce7f1c880c1035f73" class="user-component__avatar user-component__avatar-xl" />
+            <div class="user-component__text">
+                <h4 class="user-component__title">Nicolas</h4>
+                <!-- <h6 class="user-component__subtitle">test type</h6> -->
+                <!-- 주석처리 해놓았다가 필요할 때 풀어서 쓰도록 합시다. -->
+            </div>
+        </div>
+        <div class="user-component__column"></div>
+    </div>
+
+    <!-- 텍스트를 적을때는 <p>, <span>, <hgroup> 등에 적어준다.
+        보니까 div에 그냥 적어버리는 경우는 거의 없음 -->
+    <div class="friends-screen__channel">
+        <div class="friends-screen__channel-header">
+            <span>Channel</span>
+            <i class="fas fa-chevron-up fa-xs"></i>
+        </div>
+
+        <!-- 이후에 사진이 작은 버전의 user-components가 다시 한 번 나온다.
+        고로 주워다가 쓰면 됨~
+        사진 크기 같은 세부사항들은 또 수정해서 써야겠지만~-->
+        <div class="user-component">
+            <div class="user-component__column">
+                <img src="https://ww.namu.la/s/2675f0d7e8ab0989a0cee78cc0a36aa64eafa82be09c4adf3847a29d04b8689edaf92c314c4129a3a04c494c6484ed2fc022955b6908e5d74948764ae70ba8fdf5941ef86f54b46f0f8ecefd70e8541371b616ebda81e01d3f8c6576da2ff1be2e1d123e1e43e91ce7f1c880c1035f73" class="user-component__avatar user-component__avatar-sm" />
+                <div class="user-component__text">
+                    <h4 class="user-component__title__channel user-component__title-not-bold">Channel</h4>
+                </div>
+            </div>
+
+            <!-- 여기는 왼쪽에 있는 user-component__column과는 다르니 분리해주도록 하자.
+            user-component에서 space-between을 해주도록! -->
+            <div class="user-component__column">
+                <div>
+                    <span>2</span>
+                    <i class="fas fa-chevron-right fa-xs"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="user-component">
+            <div class="user-component__column">
+                <img src="https://ww.namu.la/s/2675f0d7e8ab0989a0cee78cc0a36aa64eafa82be09c4adf3847a29d04b8689edaf92c314c4129a3a04c494c6484ed2fc022955b6908e5d74948764ae70ba8fdf5941ef86f54b46f0f8ecefd70e8541371b616ebda81e01d3f8c6576da2ff1be2e1d123e1e43e91ce7f1c880c1035f73" class="user-component__avatar user-component__avatar-sm" />
+                <div class="user-component__text">
+                    <h4 class="user-component__title__channel user-component__title-not-bold">Channel</h4>
+                </div>
+            </div>
+
+            <!-- 여기는 왼쪽에 있는 user-component__column과는 다르니 분리해주도록 하자.
+            user-component에서 space-between을 해주도록! -->
+            <div class="user-component__column">
+                <div>
+                    <span>2</span>
+                    <i class="fas fa-chevron-right fa-xs"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </main>
+    
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link" href="freiends.html"><i class="fas fa-user fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="chats.html">
+                    <span class="nav__notification badge">1</span>
+                    <i class="far fa-comments fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="find.html">
+                    <i class="fas fa-search fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="more.html">
+                    <span class="nav_reddot"></span>
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 큰 틀을 잡아두고 클래스 명명 작업 시작. 
+    항상 간결하게. 관련성 있게!-->
+    
+
+
+
+    <!-- script는 항상 바디의 맨 마지막에 있어야 한다. -->
+    <script src="https://kit.fontawesome.com/300544da27.js" crossorigin="anonymous"></script>
+</body>
+</html>

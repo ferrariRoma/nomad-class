@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More - Kokoa Clone</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- chats page is similar to friends page. So copy and edit will best thing. -->
+    <div class="status--bar">
+        <div class="status--bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status--bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status--bar__column">
+            <span>110%</span>
+            <i class="fas fa-battery-full fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <!-- 네비게이션 바는 nav를 사용한다. 보통 nav는
+    ul과 li로 구성이 됨. 그리고 li는 anchor를 가진다. -->
+    <header class="screen-header">
+        <h1 class="screen-header__title">More</h1>
+        <div class="screen-header__icons">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="fas fa-music fa-lg"></i></span> 
+            <span><i class="fas fa-cog fa-lg"></i></span>
+            <span class="nav_reddot cog_reddot cog_reddot-music"></span>
+        </div>
+    </header>
+
+    <!-- 클래스를 통해서 잘 정리를 해놓았기 때문에 
+    중복되는 부분이 많아지는 후반부로 갈수록 더욱 힘을 덜 들일 수 있다.-->
+    <!-- 추가적으로 프로필 사진 밑에 있는 아이콘 열들은 find에 있는 아이콘 열들과
+    비슷하다. 고로 components에 추가하면 좋을 거 같음!  -->
+    <main class="main-sreen more-screen">
+        <div class="user-component">
+            <div class="user-component__column">
+                <img src="https://ww.namu.la/s/2675f0d7e8ab0989a0cee78cc0a36aa64eafa82be09c4adf3847a29d04b8689edaf92c314c4129a3a04c494c6484ed2fc022955b6908e5d74948764ae70ba8fdf5941ef86f54b46f0f8ecefd70e8541371b616ebda81e01d3f8c6576da2ff1be2e1d123e1e43e91ce7f1c880c1035f73" class="user-component__avatar user-component__avatar-xl" />
+                <div class="user-component__text">
+                    <h4 class="user-component__title">Nicolas</h4>
+                        <h6 class="user-component__subtitle">010 1010 0101 
+                            <span class="user-component__info"><i class="fas fa-exclamation"></i></span>
+                        </h6>
+                </div>
+            </div>
+            <div class="user-component__column">
+                <i class="far fa-comment-alt fa-3x"></i>
+            </div>
+        </div>
+
+
+        <!-- 프로필 사진div 아랫쪽에 있는 공간은 어디에나 있는 공간이다.
+        고로 니꼬는 이런 부분에 있어서는 screens에 따로 만들면 좋다고 한다.-->
+        <div class="icon-row">
+            <div class="icon-row__icon">
+                <i class="far fa-calendar-alt"></i>
+                <span>Calander</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="far fa-smile-wink"></i>
+                <span>Emoticons</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fas fa-palette"></i>
+                <span>Themes</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="far fa-user-circle"></i>
+                <span>Account</span>
+            </div>
+        </div>
+
+        <div class="more-suggestions">
+            <h4 class="more-suggestions__title">
+                Suggestions
+            </h4>
+
+            <div class="more-suggestions__icons">
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-img"><i class="fas fa-quote-right"></i></div>
+                    <span class="more-suggestions__icon-text">Kokoa story</span>
+                </div>
+            </div>
+        </div>
+    
+    </main>
+    
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link" href="freiends.html"><i class="far fa-user fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="chats.html">
+                    <span class="nav__notification badge">1</span>
+                    <i class="far fa-comments fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="find.html">
+                    <i class="fas fa-search fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="more.html">
+                    <span class="nav_reddot"></span>
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 큰 틀을 잡아두고 클래스 명명 작업 시작. 
+    항상 간결하게. 관련성 있게!-->
+    
+
+
+
+    <!-- script는 항상 바디의 맨 마지막에 있어야 한다. -->
+    <script src="https://kit.fontawesome.com/300544da27.js" crossorigin="anonymous"></script>
+</body>
+</html>

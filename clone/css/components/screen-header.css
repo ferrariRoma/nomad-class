@@ -1,0 +1,37 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+
+.screen-header__title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.screen-header__icons span {
+  margin-left: 25px;
+}
+
+.screen-header__icons {
+  position: relative;
+}
+
+.cog_reddot {
+  position: absolute;
+  left: 72px;
+  bottom: 18px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.cog_reddot-music {
+  position: absolute;
+  left: 125px;
+  bottom: 18px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+}
