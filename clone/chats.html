@@ -40,13 +40,14 @@
     friends 스크린의 간격도 벌어지게 된다.
     나는 그냥 괜찮아서 뒀는데 니꼬는 이렇게 한 뒤에 #friends-display-link에
     margin-bottom에 negative값을 주었다. margin-top:-10px; -->
-    <main class="main-sreen">
+    <main class="main-screen">
     <!-- 
     main을 설정한 이유는 동일한 간격으로 패딩값이 들어가기 때문이다.
 
     여기는 프로필 사진과 이름이 나오는 곳이다. 
     여러군데 쓰이는 만큼 components에 css를 만들 수 있도록
     합시다! -->
+    <a href="chat.html">
     <div class="user-component">
         <div class="user-component__column">
             <img 
@@ -69,7 +70,7 @@
             여기서는 div로 진행을 시키면 badge 클래스로도 쉽게 만들 수 있다.-->
         </div>
     </div>
-
+    
     <div class="user-component">
         <div class="user-component__column">
             <img 
@@ -92,7 +93,7 @@
             여기서는 div로 진행을 시키면 badge 클래스로도 쉽게 만들 수 있다.-->
         </div>
     </div>
-
+    </a>
     </main>
     
     <nav class="nav">
@@ -123,7 +124,9 @@
     <!-- 큰 틀을 잡아두고 클래스 명명 작업 시작. 
     항상 간결하게. 관련성 있게!-->
     
-
+    <div id="no-mobile">
+        <span>no mobile</span>
+    </div>
 
 
     <!-- script는 항상 바디의 맨 마지막에 있어야 한다. -->

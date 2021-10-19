@@ -105,3 +105,26 @@ absolute를 해주면 크기가 padding값을 준 것을 반영해서 최소 크
 .open-post__photo {
   position: relative;
 }
+
+@keyframes heartbeat {
+  0% {
+    color: white;
+  }
+  50% {
+    transform: scale(2);
+    color: tomato;
+  }
+  100% {
+    color: white;
+  }
+}
+/* 조~금 신기한게 scale의 크기가 작으면
+흔들림이 보인다. 이런 부분은 will-change를
+적어주면 나아진다. 브라우저에게 어떤 부분이
+변할 것이라고 미리 말해주는 개념.
+하지만 여러군데 쓰는 것은 별로고 부자연스러운
+부분이 보일떄 사용하면 좋다. */
+.open-post__heart-count:hover i {
+  will-change: transform;
+  animation: heartbeat 1s linear infinite;
+}

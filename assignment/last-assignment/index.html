@@ -2,116 +2,47 @@
 <html lang="kr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Mokua Talk</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <section class="left">
-        <div class="head-btn">
-            <i class="fas fa-chevron-left fa-lg"></i>
-            <span><i class="fas fa-search fa-lg"></i></span>
+    <div class="status--bar">
+        <div class="status--bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
         </div>
+        <div class="status--bar__column">
+            <span>17:28</span>
+        </div>
+        <div class="status--bar__column">
+            <span>78%</span>
+            <i class="fas fa-battery-three-quarters fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+    
 
-        <div class="title-name">
-            <img src="https://yt3.ggpht.com/FzYzemCHJ3Sw4ppygIoCEQoGbWRQBF7OPGijEKKg3UC5-MrUOKfXMbux3ZRgyDkyV4Jlio7m=s176-c-k-c0x00ffffff-no-rj-mo" />
-            <h1>Parcels</h1>
-            <span>Indie rock, Nu disco, Alternative Rock</span>
-        </div>
+    <header class="welcome--header">
+        <h1 class="welcome--header__title">We are Mokua Talk</h1>
+        <p class="welcome--header__text">Log in please ;)</p>
+    </header>
 
-        <div class="how-to">
-            <span class="how-to__btn">Shuffle</span>
-            <span class="how-to__btn"><i class="fas fa-heart"></i>212,971</span>
-        </div>
 
-        <div class="songlist">
-            <img src="https://yt3.ggpht.com/FzYzemCHJ3Sw4ppygIoCEQoGbWRQBF7OPGijEKKg3UC5-MrUOKfXMbux3ZRgyDkyV4Jlio7m=s176-c-k-c0x00ffffff-no-rj-mo" />
-            <div class="songlist__content">
-                <div class="songlist__content__name">
-                    <span>Parcels</span>
-                    <h3>Shadow</h3>
-                </div>
-                <i class="fas fa-ellipsis-v"></i>
-            </div>
-        </div>
-        <div class="songlist">
-            <img src="https://yt3.ggpht.com/FzYzemCHJ3Sw4ppygIoCEQoGbWRQBF7OPGijEKKg3UC5-MrUOKfXMbux3ZRgyDkyV4Jlio7m=s176-c-k-c0x00ffffff-no-rj-mo" />
-            <div class="songlist__content">
-                <div class="songlist__content__name">
-                    <span>Parcels</span>
-                    <h3>Free</h3>
-                </div>
-                <i class="fas fa-ellipsis-v"></i>
-            </div>
-        </div>
-        <div class="songlist">
-            <img src="https://yt3.ggpht.com/FzYzemCHJ3Sw4ppygIoCEQoGbWRQBF7OPGijEKKg3UC5-MrUOKfXMbux3ZRgyDkyV4Jlio7m=s176-c-k-c0x00ffffff-no-rj-mo" />
-            <div class="songlist__content">
-                <div class="songlist__content__name">
-                    <span>Parcels</span>
-                    <h3>Comingback</h3>
-                </div>
-                <i class="fas fa-ellipsis-v"></i>
-            </div>
-        </div>
-        <div class="songlist">
-            <img src="https://yt3.ggpht.com/FzYzemCHJ3Sw4ppygIoCEQoGbWRQBF7OPGijEKKg3UC5-MrUOKfXMbux3ZRgyDkyV4Jlio7m=s176-c-k-c0x00ffffff-no-rj-mo" />
-            <div class="songlist__content">
-                <div class="songlist__content__name">
-                    <span>Parcels</span>
-                    <h3>Exotica</h3>
-                </div>
-                <i class="fas fa-ellipsis-v"></i>
-            </div>
-        </div>
+    <form action="freiends.html" method="get" id="login--form">
+        <input name="username" type="text" placeholder="Email or phone number" />
+        <input name="password" type="password" placeholder="Password" />
+        <input type="submit" value="Log in" />
+        <a href="#">Find Mokua Account or Password</a>
+    </form>
 
-        <div class="nowplay how-to__btn-playpart">
-            <div class="nowplay__content">
-                <span>Parcels</span>
-                <h3>Shadow</h3>
-            </div>
-            <div class="playstop">
-                <i class="fas fa-step-backward"></i>
-                <i class="fas fa-stop"></i>
-                <i class="fas fa-step-forward"></i>
-            </div>
-        </div>
-    </section>
+    <div id="splash-screen">
+        <i class="fas fa-comments"></i>
+    </div>
 
-    <section class="right">
-        <div class="head-btn">
-            <i class="fas fa-chevron-left fa-lg"></i>
-            <span><i class="fas fa-ellipsis-v fa-lg"></i></span>
-        </div>
-
-        <div class="title-name title-name__big">
-            <img src="https://yt3.ggpht.com/FzYzemCHJ3Sw4ppygIoCEQoGbWRQBF7OPGijEKKg3UC5-MrUOKfXMbux3ZRgyDkyV4Jlio7m=s176-c-k-c0x00ffffff-no-rj-mo" />
-            <h1>Shadow</h1>
-            <span>Parcels</span>
-        </div>
-
-        <div class="playtime">
-            <span class="playtime__now">1:50</span>
-            <span class="playtime__end">3:00</span>
-        </div>
-
-        <div class="playbar">
-            <div class="playbar__left"></div>
-            <div class="playbar__now"></div>
-            <div class="playbar__right"></div>
-        </div>
-
-        <div class="control">
-            <i class="fas fa-redo-alt"></i>
-            <i class="fas fa-step-backward"></i>
-            <i class="fas fa-play-circle"></i>
-            <i class="fas fa-step-forward"></i>
-            <i class="fas fa-random"></i>
-        </div>
-
-    </section>
-
+    <div id="no-mobile">
+        Reduce the width of the Internet screen.
+    </div>
 
     <script src="https://kit.fontawesome.com/6478f529f2.js" 
 crossorigin="anonymous"></script>

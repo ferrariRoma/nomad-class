@@ -11,12 +11,16 @@
 @import "components/user-component.css";
 @import "components/badge.css";
 @import "components/icon-raw.css";
+@import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
 
 /* Screens */
 @import "screens/login.css";
 @import "screens/friends.css";
 @import "screens/find.css";
 @import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
 /* import order is very important. If variables file 
 go under the components, we might not use it. */
 
@@ -33,6 +37,6 @@ a {
 /* style.css 에는 body처럼 전체적인 설정값을 적어두면 좋다. */
 
 /* 메인 화면에는 좌우에 패딩 값이 20px씩 다 들어가있기 때문에 여기다가 설정해준다. */
-.main-sreen {
+.main-screen {
   padding: 0 var(--horizontal-space);
 }

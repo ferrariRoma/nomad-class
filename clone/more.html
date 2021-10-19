@@ -25,12 +25,14 @@
 
     <!-- 네비게이션 바는 nav를 사용한다. 보통 nav는
     ul과 li로 구성이 됨. 그리고 li는 anchor를 가진다. -->
+    <!-- 설정 아이콘을 클릭하면 설정 창으로 넘어가도록 하려면
+    설정 아이콘을 링크로 감싸면 된다.  -->
     <header class="screen-header">
         <h1 class="screen-header__title">More</h1>
         <div class="screen-header__icons">
             <span><i class="fas fa-search fa-lg"></i></span>
             <span><i class="fas fa-music fa-lg"></i></span> 
-            <span><i class="fas fa-cog fa-lg"></i></span>
+            <span><a href="settings.html"><i class="fas fa-cog fa-lg"></i></a></span>
             <span class="nav_reddot cog_reddot cog_reddot-music"></span>
         </div>
     </header>
@@ -39,7 +41,7 @@
     중복되는 부분이 많아지는 후반부로 갈수록 더욱 힘을 덜 들일 수 있다.-->
     <!-- 추가적으로 프로필 사진 밑에 있는 아이콘 열들은 find에 있는 아이콘 열들과
     비슷하다. 고로 components에 추가하면 좋을 거 같음!  -->
-    <main class="main-sreen more-screen">
+    <main class="main-screen more-screen">
         <div class="user-component">
             <div class="user-component__column">
                 <img src="https://ww.namu.la/s/2675f0d7e8ab0989a0cee78cc0a36aa64eafa82be09c4adf3847a29d04b8689edaf92c314c4129a3a04c494c6484ed2fc022955b6908e5d74948764ae70ba8fdf5941ef86f54b46f0f8ecefd70e8541371b616ebda81e01d3f8c6576da2ff1be2e1d123e1e43e91ce7f1c880c1035f73" class="user-component__avatar user-component__avatar-xl" />
@@ -87,6 +89,10 @@
                     <div class="more-suggestions__icon-img"><i class="fas fa-quote-right"></i></div>
                     <span class="more-suggestions__icon-text">Kokoa story</span>
                 </div>
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-img"><i class="fas fa-quote-right"></i></div>
+                    <span class="more-suggestions__icon-text">Kokoa story</span>
+                </div>
             </div>
         </div>
     
@@ -121,7 +127,9 @@
     항상 간결하게. 관련성 있게!-->
     
 
-
+    <div id="no-mobile">
+        <span>no mobile</span>
+    </div>
 
     <!-- script는 항상 바디의 맨 마지막에 있어야 한다. -->
     <script src="https://kit.fontawesome.com/300544da27.js" crossorigin="anonymous"></script>
