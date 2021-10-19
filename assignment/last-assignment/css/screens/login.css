@@ -1,0 +1,70 @@
+.welcome--header {
+  margin: 90px 0;
+  text-align: center;
+  /* 디스플레이에 flex 값을 둘 수도 있지만 여기는 h1과 p로 구성되어 있기 때문에
+    이렇게 설정해주는게 더 괜찮다. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600px;
+}
+
+.welcome--header__title {
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.welcome--header__text {
+  width: 50%;
+  opacity: 0.8;
+  /* 회색조 글씨는 회색으로 설정할 수도 있지만 opacity 값을 먹일 수도 있다. */
+}
+
+#login--form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+}
+
+#login--form input {
+  padding: 20px 0;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#login--form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  transition: border-color 0.3s ease-in-out;
+}
+/* 이렇게 해주니까 log in 버튼에 마저 노란색 줄이 생긴다.
+  이럴땐 not을 사용해주면 됨. 중요한 점은 원래 border-bottom과
+  transition이  #login--form input 여기에 있었다.
+  하지만 not설정을 해주는 곳에 '잘라서 붙여넣기'를 하였다.
+  그럼 not에 설정된 조건 외의 모든 #longin--form input에 
+  설정 값을 먹여준다.
+  추가적으로 타입을 적용할 때는 중괄호를 또 열어주어야 함. */
+
+#login--form input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#login--form input:focus {
+  border-color: var(--yellow);
+}
+
+#login--form input[type="submit"] {
+  background-color: var(--yellow);
+  /* cursor: not-allowed; */
+  /* cursor: progress; */
+  cursor: pointer;
+  padding: 20px 0;
+  border-radius: 5px;
+}
+
+#login--form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}

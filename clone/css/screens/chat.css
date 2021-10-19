@@ -1,0 +1,233 @@
+#chat-screen {
+  background-color: #abc1d1;
+  height: 1000vh;
+}
+
+/* 상태bar와 alt-header는 고정을 해야 된다.
+그래야 밑으로 스크린을 내려도 괜찮다. */
+/* 위에 고정된 2개에도 배경색을 줄 것이다.
+그래야지 밑에 채팅들이 위로 올라가면서 겹치지 않기
+때문이다. */
+/* 니꼬는 여기서 색을 주면 두번째가 첫번째를 침범함.
+만약 이런 현상이 있다면 'z-index'를 적용하면 된다.
+이것은 layer의 순서가 몇번째 인지를 나타내 준다.
+즉 2번이 1번보다 앞에 있는 것 처럼 그런 효과를
+내어준다. 디폴트는 0이다. */
+#chat-screen .alt-header,
+#chat-screen .status--bar {
+  background-color: #abc1d1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* #chat-screen .status--bar {
+  z-index: 2;
+} */
+
+#chat-screen .alt-header {
+  top: 20px;
+}
+
+@keyframes fadein {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.main-chat {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadein 0.7s linear;
+}
+
+.chat__timestamp {
+  color: white;
+  background-color: #92a4b2;
+  padding: 5px 16px;
+  border-radius: 16px;
+  font-size: 20px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-top: 25px;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 15px;
+}
+
+.message__time {
+  opacity: 0.8;
+  font-size: 15px;
+}
+
+.message__author {
+  opacity: 0.8;
+  font-size: 15px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* border-top-left-radius: 0;
+이런걸 통해서 특정 모서리만 둥글지 않게 할 수 있다. */
+.message__buble {
+  background-color: white;
+  padding: 8px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  padding: 10px 15px;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+/* 시간이 아래로 내려와 있어야 하니까
+flex-end이다. */
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* 여기 보면 내가 쓴 부분은 flex-end를
+통해서 가장 우측으로 보내준다. */
+.message-row-own {
+  justify-content: flex-end;
+}
+
+.message-row-own .message__buble {
+  background-color: var(--yellow);
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  margin-left: 10px;
+}
+
+/* flex에서는 order을
+이용해서 순서를 바꿔줄 수 있다. 
+이거는 오직 flex children에게만
+적용이 된다. */
+/* .message-row-own .message__time {
+  order: 0;
+} */
+/* 이렇게 하면 아무런 변화가 없다.
+이걸 더 적어줘야 함. */
+/* .message-row-own .message__buble {
+  order: 1;
+} */
+/* 보다시피 order을 사용하면
+적어야 하는게 좀 있다. 다른 방법으로는.. */
+
+.message-row-own .message__info {
+  flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 25px;
+  box-sizing: border-box;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply input {
+  height: 30px;
+  width: 90%;
+  border-radius: 20px;
+  border: var(--main-border);
+  padding: 5px 15px;
+  transition: all 0.3s ease-in-out;
+}
+/* 상위인 reply__column이 너비를 가지고 있지 않기 때문에
+여기다 100%을 해주어도 먹히질 않음.
+이처럼 정상적으로 width를 주려면, 내가 공부하고 찾은 결과
+특히나 %에 있어서는 더욱! 상위 개체부터 너비를 주어야 한다. */
+
+.reply__column:last-child i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 20px;
+  top: 6.5px;
+}
+
+/* .reply__column:last-child i:first-child {
+  right: 20px;
+} */
+/* 이렇게 표현을 해줄 수도 있지만,
+> 기호를 이용해서 더 간단하게 표현해 줄수도 있다. */
+.reply__column:last-child > i {
+  right: 66px;
+  top: 13px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: var(--main-border);
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+}
+
+.reply i,
+.reply i:not(i:last-child) {
+  opacity: 0.7;
+}
+
+.reply__column button > i {
+  left: 8px;
+}
+
+/* focus-within은
+focus가 되어있는~ 이라는 뜻이다.
+내부에 포커스가 되어있는 개체가 있는지를
+감지하는 기능을 한다. */
+/* .reply:focus-within .reply__column:first-child {
+  display: none;
+} */
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child {
+  opacity: 0;
+  /* visibility: hidden; */
+}
+
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 95vw;
+  transform: translateX(-10%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
+}

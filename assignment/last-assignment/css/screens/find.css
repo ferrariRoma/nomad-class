@@ -1,0 +1,120 @@
+.recommended-frieds {
+  border-bottom: var(--main-border);
+  border-top: var(--main-border);
+  padding: 4vw 0;
+  margin-bottom: 3vw;
+}
+
+.recommended-frieds__title {
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.recommended-frieds span {
+  display: block;
+  margin: 10vw 0;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.4em;
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.7;
+  margin-bottom: 10vw;
+}
+
+.open-chat__header span {
+  opacity: 0.6;
+}
+
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.opne-chat__title {
+  font-weight: 600;
+  margin-bottom: 2vw;
+}
+
+/* css에서 소문자를 대문자로 만들어 줄 수 있다. */
+.opne-chat__hashtags {
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.open-post__members {
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.open-post__members img {
+  width: 15px;
+  border-radius: 7.5px;
+  margin-right: 1vw;
+}
+
+.open-post__member-count {
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+.open-post__column .devider {
+  width: 1.5px;
+  height: 14px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 5px;
+}
+
+.open-post__member-status {
+  color: magenta;
+  opacity: 0.4;
+}
+
+.open-post__photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.open-post__heart-count {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1vw;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.open-post__heart-count span {
+  margin-left: 3px;
+}
+
+.open-post__photo {
+  position: relative;
+}
+
+@keyframes heartbeat {
+  0% {
+    color: white;
+  }
+  50% {
+    transform: scale(2);
+    color: tomato;
+  }
+  100% {
+    color: white;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform;
+  animation: heartbeat 1s linear infinite;
+}

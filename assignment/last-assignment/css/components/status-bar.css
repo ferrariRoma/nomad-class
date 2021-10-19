@@ -1,0 +1,32 @@
+.status--bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1vh 1vw;
+  background-color: #abb1ba;
+  font-size: 1em;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.status--bar__column {
+  width: 33%;
+}
+
+.status--bar__column:first-child span {
+  margin-right: 0.2vw;
+}
+
+.status--bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status--bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.status--bar__column i {
+  margin: 0 0 0 0.4vw;
+}

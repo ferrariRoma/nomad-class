@@ -1,0 +1,64 @@
+#friends-display-link {
+  text-align: center;
+  display: block;
+  background-color: #fafafa;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+#friends-display-link i {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.friends-screen__channel {
+  margin-top: 25px;
+  border-top: var(--main-border);
+  padding-top: 15px;
+}
+
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* absolute를 걸면 가장 가까운 부모에
+relative를 걸어주어야 하는데
+가장 상위 개체인 body를 기준으로 하기 위해
+아무데도 relative를 적어주지 않음. */
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10em;
+  animation: hideSplashScreen 0.5s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+/* css를 이용해서 splash를 없애고 싶지만
+완벽하게 없애기는 힘들다.
+forwards를 이용하면 from에서 to로 갔다가 
+그대로 머물도록 할 수 있다. */
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    /* 이걸 추가하면 사라지고서도
+     내가 클릭을 할 수 있다.
+     마우스에 걸리지 않게 빠져버리는 효과이다.
+     그대로 남아있긴 함!!!
+     그래서 진짜 숨기고 싶으면 이걸 쓰면 안되고
+     js를 사용해야 한다. */
+  }
+}

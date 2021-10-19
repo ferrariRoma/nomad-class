@@ -1,0 +1,95 @@
+.user-component {
+  justify-content: space-between;
+  margin-bottom: 2vh;
+}
+
+.user-component,
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.update-friends {
+  display: flex;
+  padding: 2vh 0;
+  margin-bottom: 2vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  overflow-x: scroll;
+}
+
+.update__preview {
+  text-align: center;
+  margin-right: 2vw;
+}
+
+.update__profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.user-component__avatar-xl {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.user-component__title {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.user-component__subtitle {
+  margin-top: 2vh;
+  color: rgba(0, 0, 0);
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.update-friends img,
+.user-component__avatar-sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+}
+
+.user-component__title-not-bold {
+  font-weight: 400;
+}
+
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-component__time {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.user-component__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  border: 1px solid tomato;
+  border-radius: 10px;
+  font-size: 8px;
+  margin-left: 5px;
+  border-width: 2px;
+  color: tomato;
+}

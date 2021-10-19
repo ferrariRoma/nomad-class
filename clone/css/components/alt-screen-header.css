@@ -1,0 +1,39 @@
+.alt-header {
+  padding: var(--horizontal-space);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alt-header__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* space-between이 글자 수에 따라서 배열이 중앙 정열이 안된다는 점
+지난 강의에서 들었던거 기억 하시죠?
+auto를 쓰시면 글자 수와 무관하게 중앙 정열이 됩니다. */
+.alt-header__column:first-child {
+  margin-right: auto;
+}
+
+.alt-header__column:last-child {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alt-header__column span:last-child {
+  margin-left: 30px;
+}
+/* absolute을 이용해서 정중앙에 오게 하는 건
+ css에서는 이상하게 보인다. 그래서 저번에 알려준
+ 일종의 hack을 여기서 사용해주자. */
+.alt-header__column {
+  width: 33%;
+}
+
+.alt-header__column:nth-child(2) {
+  text-align: center;
+}
