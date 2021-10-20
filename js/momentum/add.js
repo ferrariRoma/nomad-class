@@ -47,8 +47,6 @@ let을 그냥 써주면 된다. */
 // i=3
 // console.log(i);
 
-
-
 /* 2-4강 booleans */
 // const amIFat=true;
 // console.log(amIFat);
@@ -69,8 +67,6 @@ defined은 변수는 정의했지만 값을 할당해주지
 /* null은 자연적으로 발생하지는 않고,
 사용자가 여기에 아무것도 없다는 것을 나타내기 위해
 할당해주는 것이다. */
-
-
 
 /* 2-5강 array */
 // const mon="mon";
@@ -103,8 +99,6 @@ C와는 배열의 선언이 조금 다르다는 것을 느끼는구만.. */
 // daysOfWeek.push("sun");
 // console.log(daysOfWeek);
 
-
-
 /* 2-6강 */
 /* 가끔은 list가 아니라 object라는 것을 만들어야 할 때도 있다. 
 {}를 사용한다.
@@ -114,6 +108,18 @@ C와는 배열의 선언이 조금 다르다는 것을 느끼는구만.. */
 //     points: 10,
 //     fat: true,
 // };
+
+/* const game = {
+  title: "FPS",
+  price: 24000,
+  production: "valve",
+};
+console.log(game);
+console.log(game.production);
+game.production = "kakaoGames";
+console.log(game.production);
+game.release = 2020;
+console.log(game); */
 
 // console.log(player);
 // console.log(player.points);
@@ -148,7 +154,6 @@ of course, yes!
 // player.points=player.points+15;
 // player.points="player.points+15";
 // console.log(pla
-
 
 /* 2-7강 function */
 /* console.log 중 console이 뭔지는 알게 됐는데,
@@ -212,3 +217,21 @@ player.saynimo라고 호출해줄 수 있다.
 object밖에서 함수를 부르는 것과는 조~금 다르니
 눈여겨 봐두자! */
 // player.saynimo("hello world");
+
+/* function plus(a, b) {
+  console.log(a + b);
+}
+plus(5, 2);
+
+function prt(a, b) {
+  console.log(a + b);
+}
+prt("what are ", "you doing?");
+
+const company = {
+  foudation: 2010,
+  value: function (market, current) {
+    console.log(market + current);
+  },
+};
+company.value(20, 10); */
