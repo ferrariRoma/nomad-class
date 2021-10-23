@@ -257,3 +257,40 @@ h1.addEventListener("click", handleHOneClick);
 
 /* 이제는 class name들로 HTMLelement에서 숨기고 표시하는
 방법과 이를 이용해서 toggle을 사용할 수 있게 되었음! */
+
+/*
+전체적인 전개과정을 복습해봅시다.
+목적은 하나, js에서 html의 특정 태그에 css에서 정의한
+className을 할당하고 싶음!
+이를 위해서 어떤 것을 배움?
+
+1. 먼저 접근 방법을 배웠다.
+가. 
+document.getElementsByTagName("태그")
+document.getElementsByClassName("클래스")
+document.getElementById("아이디")
+document.querySelector("css selector")
+document.querySelectorAll("css selector")
+를 이용해서 html의 elements들을 가지고 오자.
+
+나.
+가지고 온 정보를 이용해서 addEventListener을 이용해
+이벤트를 감지할 수 있는 환경을 만들어주자.
+
+다.
+일반적인 함수나 object 내 멤버로 있는 함수를 이용해서
+이벤트에 대한 reaction을 설정해준다.
+
+2. 이런 과정을 통해 className을 할당할 수 있는데,
+어떻게 하면 기존에 있는 class 정보를 싹 다
+바꾸지 않고 특정 class만 할당했다가 해제할 수 있을까?
+그런 방법에서는 classList를 사용해야 한다.
+classList에서는 총 3가지를 사용할 수 있음.
+하나는 add, 두번째는 remove, 세번째는 contains이다.
+contains를 이용해서 특정 클래스가 들어가 있으면
+remove를 이용해서 제거해주고 하고,
+없으면 add를 이용해서 추가해준다.
+
+3. 그런데 번거롭잖아?
+그래서 우리는 toggle을 사용하기로 하였다!
+ */
