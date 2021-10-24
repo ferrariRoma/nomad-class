@@ -122,3 +122,63 @@ link.addEventListener("click", handleLink);
 알 수 있다. 당연함! 왜냐면 이건 anchor와 관련된
 event info이니까!
 즉 그냥 다른 예를 드는 거니까 지난 내용을 이해했음 땡~ */
+
+/* 4-4강 
+클릭했을때 form 자체가 사라져야 됨.
+아예 없어져야 된다.
+이걸 구현하려면 html 요소 자체를 없애는 것,
+그리고 다른 방법은 css를 이용해서 숨기는 것이다.
+visibility: hidden
+코코아톡 마지막에 splash화면 숨기는 것 때문에 배웠었지?
+아 그거랑은 다르게 이번에는 
+display: none
+을 사용하는구나.
+이걸 이용해서 login버튼을 누르면 
+form화면이 사라지도록 만들어보자.
+visibility:hidden은 공간은 그대로 두고 보이지만 않는건데
+display:none은 잡아둔 공간도 사라진다고 하더라고요!
+
+
+이렇게 하니까 input에 적었던 것은
+변수 user에 저장이 되고,
+form 화면만 사라졌다.
+
+여기에 다른 html요소를 추가해보자.
+원하는 모양이, form에는 hidden클래스를
+추가하고,
+h1이나 태그들을 통해서 제목이나
+내용들을 적어둔 것은 hidden클래스를
+처음부터 할당했다가 해제하는 방식으로
+form화면과 main내용을 교체하려고 함.
+
+유저의 이름을 변수로 저장해서,
+그 이름을 h1에 넣어보자!
+
+참고로 중간에 변수 이름이 대문자인데,
+이런 부분은 관습적인 부분이다.
+string만 포함된 변수는 대문자로 표기함.
+특히나 중요한 정보가 아닐때는 더욱 더!
+
+string을 합치는 방법 중에서는 +가 별로긴 하다.
+그래서 다른 방법을 알아보자!
+greeting.innerText = `Hello ${user}`;
+''이게 아니라 fn + (영어키 놓고)esc를 이용한 ``을 사용!
+ */
+
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
+
+function handleSubmit(event) {
+  const user = loginInput.value;
+  event.preventDefault();
+  console.log(user);
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+  // greeting.innerText = "Hello " + user;
+  greeting.innerText = `Hello ${user}`;
+}
+
+loginForm.addEventListener("submit", handleSubmit);
