@@ -27,6 +27,7 @@ const loginForm = document.querySelector(".form");
 
 const loginInput = loginForm.querySelector("input");
 const loginBtn = loginForm.querySelector("button");
+
 /* 4-1강
 html에서 하는 것이 가장 좋긴 하지만 js에서도 유효성
 검사를 할 수 있다.
@@ -182,3 +183,133 @@ function handleSubmit(event) {
 }
 
 loginForm.addEventListener("submit", handleSubmit);
+
+/* 4-5강
+이번에는 value를 저장해보자!
+매번 사용자에게 이름을 묻는 건 별로다!
+어떻게 하면 좋을까? API를 사용해보자!
+그 API의 이름은 local storage이다.
+console에 localStorage를 검색해보면,
+이미 존재한다는 것을 알 수 있다.
+그 중 setItem을 이용하면 local storage에
+정보를 저장할 수 있다.
+localStorage.setItem("아이템 이름",값(변수));
+당연히 불러올 수도 있는데,
+getItem을 사용하면 된다.
+removeItem을 이용하면 삭제도 된다~
+
+이제 당면한 과제는
+유저명은 저장이 되는데 새로고침을 할때마다 form이 계속 출력된다.
+이걸 어떻게 하면 해결할 수 있을지 다음 시간에 이어서 배워보자!
+ */
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const user = loginInput.value;
+  console.log(user);
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  localStorage.setItem("user", user);
+  greeting.innerText = `Hello ${user}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+loginForm.addEventListener("submit", handleSubmit);
+
+/* 4-6강
+지금부터는 form을 보여주기 전에
+확인을 해야 한다.
+localStorage를 확인해서
+이전에 입력된 Item이 있으면 넘어가고,
+없으면 묻는 그런 형식이다.
+어떻게? getItem을 해서 null이 나오는지
+아닌지를 봐야 하는 것이다.
+
+만들고 보니 반복되는 동작들이 많다!
+이를 함수로 만들어서 좀 더 깔끔하게 해주도록 하자!
+paintGreetings라는 함수는 두 군데에서 argument를 받는다.
+경우의 수가 달라서 그런데,
+localStorage에 정보가 있으면 
+savedUsername에서 argument를 받고,
+없으면 user에서 받는다.
+localStorage에서 정보를 받아오는지,
+사용자가 input란에 적어놓은 정보만 받아오는지의
+차이이다.
+*/
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const user = loginInput.value;
+  localStorage.setItem(USERNAME_KEY, user);
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  greeting.innerText = `Hello ${user}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+  paintGreetings(user);
+}
+
+function paintGreetings(user) {
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting.innerText = `Hello ${user}`;
+}
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+if (savedUsername === null) {
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", handleSubmit);
+} else {
+  paintGreetings(savedUsername);
+}
+
+/* 4-7강 recap!
+음.. 니꼬쌤이 사실 paintGreetins는
+argument를 받을 필요가 없다고 했음.
+왜일까?
+"왜냐하면 localStorage에 유저정보가 존재하는 것을
+알고 있으니까 말이다."
+아마 null 경우는 제외하고 말하는 것 같음.
+input을 통하는 경우가 아니고서야 우리가 username을
+localStorage에서 찾도록 해주자!
+
+근데 하고 나니 좀 별론거 같다고 하셨고 나도 동의.
+왜냐하면 setItem을 2번 하게 된다.
+ */
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const user = loginInput.value;
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  localStorage.setItem(USERNAME_KEY, user);
+  greeting.innerText = `Hello ${user}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+  paintGreetings(user);
+}
+
+function paintGreetings(user) {
+  greeting.innerText = `Hello ${user}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (savedUsername === null) {
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", handleSubmit);
+} else {
+  paintGreetings(savedUsername);
+}
