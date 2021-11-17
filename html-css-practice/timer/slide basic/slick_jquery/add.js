@@ -1,0 +1,3 @@
+$(".test").slick({
+  dots: true,
+});
