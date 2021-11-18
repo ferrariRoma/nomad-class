@@ -19,7 +19,7 @@ let clonedLast = lastChild.cloneNode(true); // 노드 자체를 복사
 
 // Add copied slides
 slideList.appendChild(clonedFirst);
-slideList.insertBefore(clonedLast, slideList.firstElementChild);
+slideList.insertBefore(clonedLast, firstChild);
 
 // 최초위치 설정. 5 1 2 3 4 5 1에서 최초 위치를 1로 맞춰줌.
 slideList.style.transform =
@@ -51,4 +51,54 @@ slideBtnNext.addEventListener("click", function () {
     );
     curIndex = -1;
   }
+  curSlide.classList.remove("slide__active");
+  pageDots[curIndex === -1 ? slideLen - 1 : curIndex].classList.remove(
+    "dot__active"
+  );
+  curSlide = slideContents[++curIndex];
+  curSlide.classList.add("slide__active");
+  pageDots[curIndex].classList.add("dot__active");
+});
+
+// prev Button Event
+slideBtnPrev.addEventListener("click", function () {
+  if (curIndex >= 0) {
+    slideList.style.transition = slideSpeed + "ms";
+    slideList.style.transform =
+      "translate3d(-" + slideWidth * curIndex + "px, 0px, 0px)";
+  }
+  if (curIndex === 0) {
+    setTimeout(function () {
+      slideList.style.transition = "0ms";
+      slideList.style.transform =
+        "translate3d(-" + slideWidth * slideLen + "px, 0px, 0px)";
+    }, slideSpeed);
+    curIndex = slideLen;
+  }
+  curSlide.classList.remove("slide__active");
+  pageDots[curIndex === slideLen ? 0 : curIndex].classList.remove(
+    "dot__active"
+  );
+  curSlide = slideContents[--curIndex];
+  curSlide.classList.add("slide__active");
+  pageDots[curIndex].classList.add("dots__active");
+});
+
+// Add pagination dynamically
+let pageChild = "";
+for (let i = 0; i < slideLen; i++) {
+  pageChild += '<li class="dot';
+  pageChild += i === startNum ? " dot__active" : "";
+  pageChild += '" data-index"' + i + '"><a href="#"></a></li>';
+}
+pagination.innerHTML = pageChild;
+const pageDots = document.querySelectorAll(".dot");
+
+let curDot;
+Array.prototype.forEach.call(pageDots, function (dot, i) {
+  dot.addEventListener("click", function (event) {
+    event.preventDefault();
+    curDot = document.querySelector(".dot__active");
+    curDot.classList.remove("dot__active");
+  });
 });
