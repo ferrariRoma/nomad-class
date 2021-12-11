@@ -213,4 +213,3 @@ console.log(user.fullName);
 console.log(user.name);
 console.log(user.surname);
 for (let key in user) console.log(key);
-Object.defineProperty;
