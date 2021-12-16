@@ -38,15 +38,15 @@ console.log(10 * true);
 console.log(10 * false);
 console.log(10 * "A"); */
 
-// / 연산자
-// NaN 반환. 1. 양쪽 평가 결과가 하나라도 숫자가 아닐 때
+// 연산자
+// NaN 반환. 1. 양쪽 평가 결과가 하나라도 숫자가 아닐 때(+제외 하고! +는 연결해주니까~)
 // 2. 분모, 분자 모두 0일 때
 // 분모가 0이면 무한대, 분자가 0이면 0반환
 
 // 강의: 단항 연산자
 /* const value = "8";
 console.log(typeof value);
-console.log(typeof +value);  
+console.log(typeof +value);
 // number타입으로 반환!
 // 하지만 가독성이 떨어지기 때문에 아래의 방법을 더 추천!
 console.log(typeof Number(value)); */
@@ -64,7 +64,7 @@ console.log("bad" > "bfz"); */
 // 강의: 동등, 부등, 일치, 불일치 연산자
 // == 동등 연산자
 // 왼쪽과 오른쪽이 같으면 true, 다르면 false인데
-// 값 '타입'은 비교하지 않는다. 1과 "1"이 같다!
+// 값을 비교. '타입'은 비교하지 않는다. 1과 "1"이 같다! 수로 변환해서 계산
 /* console.log(1 == "1");
 console.log(1 === "1"); */
 
