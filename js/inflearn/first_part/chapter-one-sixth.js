@@ -147,3 +147,90 @@ console.log(value.indexOf(15));
 /* const value = "123123";
 console.log(value.lastIndexOf(2));
 console.log(value.lastIndexOf(2, 1)); */
+
+// 강의: 문자열 연결, 대소문자 변환
+/* const result = "sports".concat("축구", 11);
+console.log(result);
+
+const obj = new String(123);
+console.log(obj.concat("ABC", 123, "AAWW"));
+// 인스턴스에 이용하면 프리미티브 값에 연결 */
+
+// toLowerCase, toUpperCase
+/* console.log("ABCDE".toLowerCase());
+console.log("abcde".toUpperCase()); */
+
+// 강의: 문자열 추출
+// substring()
+/* const value = "01234567";
+console.log(value.substring(2, 5));
+console.log(value.substring(3));
+console.log(value.substring(3, "A")); */
+// 끝 인덱스 '직전'까지 반환
+// 2번째 파라미터가 없으면 끝까지 반환
+
+// substr()
+// 시작 인덱스부터 지정한 문자 수를 반환
+/* const value = "0123456";
+console.log(value.substr(0, 3));
+console.log(value.substr(-2, 3)); */
+
+// slice()
+/* const value = "01234567";
+console.log(value.slice(1, 4));
+console.log(value.slice(false, 4)); */
+
+// 강의: 정규 표현식을 사용할 수 있는 함수
+// match()
+// ^(캐럿, 첫 문자에 매치), $(끝 문자에 매치)
+/* const value = "Sports";
+console.log(value.match(/s/));
+console.log(value.match("spo")); */
+
+// replace()
+/* const value = "abcabc";
+console.log(value.replace("a", "바꿈"));
+console.log(value.replace(/a/, "바꿈"));
+function change() {
+  return "함수";
+}
+console.log(value.replace(/a/, change())); */
+
+// search()
+/* const value = "cbacba";
+console.log(value.search(/a/));
+console.log(value.search("K")); */
+
+// split()
+/* console.log("12_34_56".split("_"));
+console.log("12_34_56".split(""));
+console.log("12_34_56".split());
+console.log("12_34_56".split("A")); */
+
+// Unicode관련 함수
+// charCodeAt()
+/* const value = "1Aa가";
+for (var k = 0; k < value.length; k++) {
+  console.log(value.charCodeAt(k));
+}
+console.log(value.charCodeAt(12)); */
+
+// fromCharCode()
+/* console.log(String.fromCharCode(49, 65, 97, 44032)); */
+// 얘는 원본에 가서 참조를 해야 하는 함수이다.
+// 값.fromCharCode 의 모양으로 기술하는 친구들은
+// 엔진에서 인스턴스를 생성해서 그곳에서 접근을 하는 모양은데
+// 지금처럼 String.from(값) 의 모양으로
+// 값을 파라미터에 적어주는 친구들은
+// prototype에 복사되지 않기 때문에 원본으로 가서
+// 참조를 해야 한다는 것이다.
+// 그리고 뒤에 있는 저 값을 앞에 String자리에 두려면
+// 파라미터에 있는 값을 배열의 형태로 올려야 한다.
+
+// localeCompare()
+// 값을 비교하여 위치를 나타내는 값으로 변환
+// 유니코드 사전 순으로 비교. 앞은 1, 같음은 0, 뒤는 -1
+/* const value = "나";
+console.log(value.localeCompare("가"));
+console.log(value.localeCompare("나"));
+console.log(value.localeCompare("다")); */
