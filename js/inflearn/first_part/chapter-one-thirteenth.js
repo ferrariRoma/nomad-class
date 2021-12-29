@@ -140,17 +140,19 @@ console.log(obj.book); */
 // 프로퍼티 삭제 가능, 불가
 
 // true이면 프로퍼티 삭제 가능
+// 헷갈리지 말고, configurable속성이 true라고 생각하면 됨
 // value이외 속성 변경 가능
 /* const obj = {};
 Object.defineProperty(obj, "book", {
   value: "JS북",
   // 삭제 가능
-  //   configurable: true,
-  configurable: false,
+  configurable: true,
+  // configurable: false,
 });
-delete obj.book;
-console.log(obj.book);
 obj.book = "NoDelete";
+// 변경은 원래 안됨.
+console.log(obj.book);
+delete obj.book;
 console.log(obj.book); */
 
 // 강의: getter, setter, get속성, set속성
@@ -162,6 +164,8 @@ Object.defineProperty(obj, "book", {
   get: function () {
     return "JS책";
   },
+  // 함수형태여야 한다!!
+
   // value: "booking",
   // define에서 값을 설정할 때
   // 값을 value속성에 작성하게 되는데 그게 없네?
@@ -180,15 +184,18 @@ console.log(result); */
 Object.defineProperty(obj, "book", {
   set: function (param) {
     data.title = param;
+    // 값을 할당
   },
   get: function () {
     return data.title;
+    // 값을 호출
   },
 });
 obj.book = "JS책";
 // 이렇게 값을 할당해줄때
 // value속성이 없으니까 set을 호출함.
-console.log(obj.book); */
+console.log(obj.book);
+debugger; */
 
 // 위에서 보는 set,get의 형태는 ES5의 형태이다.
 // ES6에서는 조금 더 편리하게 사용할 수 있게 해두었다.
@@ -214,7 +221,7 @@ for (const key in result) {
 // getPrototypeOf은 prototype것을 가지고 오는데
 // setPrototypeOf은 __proto__에 설정을 함.
 
-// 그럼 ES5에서는 왜 이게 안됐냐?
+// 그럼 ES5에서 정의하지 않고 6에서 했을까?
 // __proto__는 5버전에서 보기에는 표준이 아님.
 // 물론 브라우저에서는 지원을 했지만,
 // 5버전 스펙에 정의가 되지 않았음. ES6에 정의가 돼 있음.
@@ -273,7 +280,7 @@ try {
   Object.defineProperty(obj, "book", {
     value: "책",
   });
-  // prevent 이후에 book key에 
+  // prevent 이후에 book key에
   // 프로퍼티를 설정하려고 하였음
 } catch (e) {
   console.log("추가 불가");
@@ -313,8 +320,8 @@ try {
 
 // isSealed()
 // 오브젝트에 프로퍼티 추가,삭제 금지 여부 반환
-// true: 응 할 수 없어. 불가능
-// false: 아니 할 수 있어. 가능
+// true: seal이 true~, 그래서 추가,삭제 불가능!
+// false: seal이 false~ 그래서 추가,삭제 가능!
 /* const obj = {};
 Object.defineProperty(obj, "book", {
   value: "책",
