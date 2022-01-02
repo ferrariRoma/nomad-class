@@ -255,6 +255,7 @@ console.log(point.toString());
 
 const obj = new Number(123);
 console.log(Object.prototype.toString.call(obj)); */
+
 /* const point = { book: "책" };
 console.log(point.toString());
 const obj = new Number(123);
@@ -265,6 +266,17 @@ console.log(Object.prototype.toString.call(obj)); */
 // call도 메소드인데,
 // 프로토타입에 있는 메소드를 인스턴스를 거치지 않고 사용하기 위해서는
 // call을 사용한다.
+
+// <복습 및 브레인스토밍>
+/* // 8번 문서에서는 call메소드를 this를 참조하여 부를 수 있는 친구라고 하였다.
+const point = { book: "책" };
+console.log(typeof point.toString());
+const obj = new Number(123); // -> 인스턴스가 만들어지면서 obj의 [[Prototype]]은 Object로 바뀐다.
+// 그래서 typeof를 하면 object가 나옴.
+// 근데 obj는 Number생성자 함수를 통해서 만들어진 친구인걸?
+console.log(typeof obj);
+console.log(Object.prototype.toString.call(obj));
+// Number오브젝트를 참조했는지를 알기 위해서는 이렇게 call을 이용해서 obj를 참조하게 해야 한다. */
 
 // toLocaleString()
 // 지역화 문자 변환 메소드를 대체해서 호출함.

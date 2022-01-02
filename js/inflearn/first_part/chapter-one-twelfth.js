@@ -102,8 +102,8 @@ const proto = obj.prototype;
 // 안에 작성된 것들이 메소드와 프로퍼티가 되는 것이다.
 debugger; */
 
-// js는 프로토타입에 객체지향에서 말하는
-// 메소드를 연결해둔다.
+// js는 프로토타입에다가
+// 객체지향에서 말하는 메소드를 연결해둔다.
 // 다른 언어와 이것부터에서 차이가 난다.
 
 // 그럼 우리가 개발하는 것은 어떻게 하면 될 것인가?
@@ -123,8 +123,8 @@ debugger;
 
 // function오브젝트를 만들면 prototype이 기본적으로
 // 만들어진다.
-// 이건 js엔진이 만들어준다.
-// 거기서 우리가 뭘 더 붙이면 class개념이 되는 것이고,
+// 이건 'js엔진'이 만들어준다.
+// 거기서 우리가 prototype에 메소드를 더 붙이면 class개념이 되는 것이고,
 // 안붙이고 그대로 사용하면 function오브젝트가 되는 것이다.
 
 // 결과적으로 function오브젝트를
@@ -160,6 +160,13 @@ Book.prototype.getBook = function () {
   }
 }
 debugger; */
+
+// 위의 코드를 보면
+// prototype에서 설정한
+// constructor와 getBook()이
+// 설정되어 있는 것을 확인할 수 있다.
+// 이처럼 Class도 곧 prototype을 기반으로
+// 작동을 한다는 것이다.
 
 // 강의: js인스턴스, instanceof연산자
 

@@ -123,6 +123,13 @@ getBook(95); */
 const result = getTotal.call(this, 10, 20);
 console.log(result); */
 
+/* const obj = { one: 100, two: 30 };
+function getTotal(one, two) {
+  return this.one + this.two;
+}
+const result = getTotal.call(obj);
+console.log(result); */
+
 // 여기서 call의 특징을 볼 수 있는데,
 // call의 특징은 두번째 파라미터부터 넘어간다.
 // 첫번째 파라미터에 들어가는 것은 일반적으로 this사용
